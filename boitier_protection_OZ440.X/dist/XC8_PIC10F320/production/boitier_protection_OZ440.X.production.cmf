@@ -1,0 +1,249 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\Bruno\AppData\Local\Temp\s4mg.obj
+end_init CODE 0 E E 1 2
+reset_vec CODE 0 0 0 1 2
+config CONFIG 0 2007 2007 1 2
+$dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+cinit CODE 0 F F 2 2
+intentry CODE 0 4 4 A 2
+text3 CODE 0 11 11 B 2
+text2 CODE 0 2A 2A 1 2
+text1 CODE 0 24 24 6 2
+maintext CODE 0 1C 1C 8 2
+cstackBANK0 BANK0 1 40 40 4 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+BANK0 0044-007D 1
+CODE 0001-0003 2
+CODE 002B-00FF 2
+CONST 0001-0003 2
+CONST 002B-00FF 2
+ENTRY 0001-0003 2
+ENTRY 002B-00FF 2
+IDLOC 2000-2003 2
+RAM 0044-007D 1
+SFR0 0000-003F 1
+STACK 0044-007D 1
+STRCODE 0001-0003 2
+STRCODE 002B-00FF 2
+STRING 0001-0003 2
+STRING 002B-00FF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <file name>:<line number> <address> <psect name> <class name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+"C:\Program Files (x86)\Microchip\xc8\v1.30\include\pic10f320.h":183 0 text0 CODE
+"F:\MPLAB\Boitier_protection_OZ440\boitier_protection_OZ440.X\interrupts.c":24 4 intentry CODE
+"C:\Users\Bruno\AppData\Local\Temp\s4mg.":766 F cinit CODE
+"C:\Users\Bruno\AppData\Local\Temp\s4mg.":769 F cinit CODE
+"C:\Users\Bruno\AppData\Local\Temp\s4mg.":775 F cinit CODE
+"C:\Users\Bruno\AppData\Local\Temp\s4mg.":776 F cinit CODE
+"C:\Users\Bruno\AppData\Local\Temp\s4mg.":777 10 cinit CODE
+"F:\MPLAB\Boitier_protection_OZ440\boitier_protection_OZ440.X\interrupts.c":24 11 text3 CODE
+"F:\MPLAB\Boitier_protection_OZ440\boitier_protection_OZ440.X\interrupts.c":51 11 text3 CODE
+"F:\MPLAB\Boitier_protection_OZ440\boitier_protection_OZ440.X\main.c":27 1C maintext CODE
+"F:\MPLAB\Boitier_protection_OZ440\boitier_protection_OZ440.X\main.c":30 1C maintext CODE
+"F:\MPLAB\Boitier_protection_OZ440\boitier_protection_OZ440.X\main.c":33 1D maintext CODE
+"F:\MPLAB\Boitier_protection_OZ440\boitier_protection_OZ440.X\main.c":40 1E maintext CODE
+"F:\MPLAB\Boitier_protection_OZ440\boitier_protection_OZ440.X\main.c":41 1F maintext CODE
+"F:\MPLAB\Boitier_protection_OZ440\boitier_protection_OZ440.X\main.c":42 20 maintext CODE
+"F:\MPLAB\Boitier_protection_OZ440\boitier_protection_OZ440.X\main.c":43 22 maintext CODE
+"F:\MPLAB\Boitier_protection_OZ440\boitier_protection_OZ440.X\main.c":37 23 maintext CODE
+"F:\MPLAB\Boitier_protection_OZ440\boitier_protection_OZ440.X\main.c":47 24 maintext CODE
+"F:\MPLAB\Boitier_protection_OZ440\boitier_protection_OZ440.X\user.c":22 24 text1 CODE
+"F:\MPLAB\Boitier_protection_OZ440\boitier_protection_OZ440.X\user.c":28 24 text1 CODE
+"F:\MPLAB\Boitier_protection_OZ440\boitier_protection_OZ440.X\user.c":29 25 text1 CODE
+"F:\MPLAB\Boitier_protection_OZ440\boitier_protection_OZ440.X\user.c":31 27 text1 CODE
+"F:\MPLAB\Boitier_protection_OZ440\boitier_protection_OZ440.X\user.c":32 28 text1 CODE
+"F:\MPLAB\Boitier_protection_OZ440\boitier_protection_OZ440.X\user.c":37 29 text1 CODE
+"F:\MPLAB\Boitier_protection_OZ440\boitier_protection_OZ440.X\system.c":18 2A text2 CODE
+"F:\MPLAB\Boitier_protection_OZ440\boitier_protection_OZ440.X\system.c":40 2A text2 CODE
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__CFG_WRT$OFF 0 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+__S0 2008 0 ABS 0 - -
+__S1 44 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__Hintentry 1C 0 CODE 0 intentry -
+__Lintentry 8 0 CODE 0 intentry -
+__CFG_BOREN$ON 0 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+__pintentry 8 0 CODE 0 intentry dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+_isr 22 0 CODE 0 text3 dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+__CFG_PWRTE$ON 0 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+_main 38 0 CODE 0 maintext dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+___sp 0 0 STACK 2 stack C:\Users\Bruno\AppData\Local\Temp\s4mg.obj
+btemp 7E 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+ltemp 7E 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+ttemp 7E 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+wtemp 7E 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+start 1C 0 CODE 0 init C:\Users\Bruno\AppData\Local\Temp\s4mg.obj
+_TRISA 6 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Bruno\AppData\Local\Temp\s4mg.obj
+ltemp0 7E 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+ttemp0 7E 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+wtemp0 7E 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+ltemp1 82 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+ttemp1 81 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+wtemp1 80 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+ltemp2 86 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+ttemp2 84 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+wtemp2 82 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+ltemp3 80 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+ttemp3 87 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+wtemp3 84 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+ttemp4 7F 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+wtemp4 86 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+wtemp5 88 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+wtemp6 7F 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+interrupt_function 8 0 CODE 0 intentry dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+__Hconfig 4010 0 CONFIG 0 config -
+__Lconfig 400E 0 CONFIG 0 config -
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+__size_of_isr 0 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+__CFG_LPBOR$ON 0 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+__Hfunctab 0 0 CODE 0 functab -
+__Lfunctab 0 0 CODE 0 functab -
+__Hcommon 0 0 ABS 0 common -
+__Lcommon 0 0 ABS 0 common -
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+_LATAbits 7 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+___int_sp 0 0 STACK 2 stack C:\Users\Bruno\AppData\Local\Temp\s4mg.obj
+_ANSELA 8 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+__Habs1 0 0 ABS 0 abs1 -
+__Labs1 0 0 ABS 0 abs1 -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Hcode 0 0 ABS 0 code -
+__Lcode 0 0 ABS 0 code -
+stackhi 0 0 ABS 0 - C:\Users\Bruno\AppData\Local\Temp\s4mg.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__end_of_ConfigureOscillator 56 0 CODE 0 text2 dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+__pcstackBANK0 40 0 BANK0 1 cstackBANK0 dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+stacklo 0 0 ABS 0 - C:\Users\Bruno\AppData\Local\Temp\s4mg.obj
+saved_w 7E 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+__Hinit 1C 0 CODE 0 init -
+__Linit 1C 0 CODE 0 init -
+__end_of_main 48 0 CODE 0 maintext dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+__Htext 0 0 ABS 0 text -
+__Ltext 0 0 ABS 0 text -
+end_of_initialization 1E 0 CODE 0 cinit dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+_PORTAbits 5 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+__Hstrings 0 0 ABS 0 strings -
+__Lstrings 0 0 ABS 0 strings -
+__Hbank0 0 0 ABS 0 bank0 -
+__Lbank0 0 0 ABS 0 bank0 -
+___latbits 0 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+__Hpowerup 0 0 CODE 0 powerup -
+__Lpowerup 0 0 CODE 0 powerup -
+__ptext0 0 0 CODE 0 text0 dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+__ptext1 48 0 CODE 0 text1 dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+__ptext2 54 0 CODE 0 text2 dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+__ptext3 22 0 CODE 0 text3 dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+__Hclrtext 0 0 ABS 0 clrtext -
+__Lclrtext 0 0 ABS 0 clrtext -
+__end_of_InitApp 54 0 CODE 0 text1 dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+__end_of__initialization 1E 0 CODE 0 cinit dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+__Hidloc 0 0 IDLOC 0 idloc -
+__Lidloc 0 0 IDLOC 0 idloc -
+__Hstack 0 0 STACK 2 stack -
+__Lstack 0 0 STACK 2 stack -
+_InitApp 48 0 CODE 0 text1 dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+__end_of_isr 38 0 CODE 0 text3 dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+__Hcinit 22 0 CODE 0 cinit -
+__Lcinit 1E 0 CODE 0 cinit -
+__size_of_ConfigureOscillator 0 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+__size_of_main 0 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+__CFG_BORV$LO 0 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+__CFG_MCLRE$OFF 0 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+__Hend_init 1E 0 CODE 0 end_init -
+__Lend_init 1C 0 CODE 0 end_init -
+__Hreset_vec 2 0 CODE 0 reset_vec -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+intlevel0 0 0 CODE 0 functab C:\Users\Bruno\AppData\Local\Temp\s4mg.obj
+__size_of_InitApp 0 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+__CFG_WDTE$OFF 0 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+intlevel1 0 0 CODE 0 functab C:\Users\Bruno\AppData\Local\Temp\s4mg.obj
+intlevel2 0 0 CODE 0 functab C:\Users\Bruno\AppData\Local\Temp\s4mg.obj
+intlevel3 0 0 CODE 0 functab C:\Users\Bruno\AppData\Local\Temp\s4mg.obj
+intlevel4 0 0 CODE 0 functab C:\Users\Bruno\AppData\Local\Temp\s4mg.obj
+intlevel5 0 0 CODE 0 functab C:\Users\Bruno\AppData\Local\Temp\s4mg.obj
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__pcstackCOMMON 0 0 COMMON 1 cstackCOMMON dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+start_initialization 1E 0 CODE 0 cinit dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+__Hmaintext 0 0 ABS 0 maintext -
+__Lmaintext 0 0 ABS 0 maintext -
+__pmaintext 38 0 CODE 0 maintext dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+__CFG_FOSC$INTOSC 0 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+__initialization 1E 0 CODE 0 cinit dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+__CFG_CP$OFF 0 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+__CFG_LVP$OFF 0 0 ABS 0 - dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+_ConfigureOscillator 54 0 CODE 0 text2 dist/XC8_PIC10F320/production\boitier_protection_OZ440.X.production.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect in on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+reset_vec 0 0 0 1 2
+intentry 0 4 8 27 2
+config 0 2007 400E 1 2
+cstackBANK0 1 40 40 4 1

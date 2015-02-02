@@ -1,0 +1,767 @@
+
+
+Microchip Technology PIC LITE Macro Assembler V1.30 build 55553 
+                                                                                               Wed Jan 07 17:52:41 2015
+
+Microchip Technology Omniscient Code Generator (Lite mode) build 55553
+     1                           	processor	10F320
+     2                           	opt	pw 120
+     3                           	opt	lm
+     4                           	psect	text0,local,class=CODE,merge=1,delta=2
+     5                           	psect	cinit,global,class=CODE,merge=1,delta=2
+     6                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+     7                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1
+     8                           	psect	maintext,global,class=CODE,split=1,delta=2
+     9                           	psect	text1,local,class=CODE,merge=1,delta=2
+    10                           	psect	text2,local,class=CODE,merge=1,delta=2
+    11                           	psect	text3,local,class=CODE,merge=1,delta=2
+    12                           	psect	intentry,global,class=CODE,delta=2
+    13                           	dabs	1,0x7E,2
+    14  0000                     	;# 
+    15  0001                     	;# 
+    16  0002                     	;# 
+    17  0003                     	;# 
+    18  0004                     	;# 
+    19  0005                     	;# 
+    20  0006                     	;# 
+    21  0007                     	;# 
+    22  0008                     	;# 
+    23  0009                     	;# 
+    24  000A                     	;# 
+    25  000B                     	;# 
+    26  000C                     	;# 
+    27  000D                     	;# 
+    28  000E                     	;# 
+    29  000F                     	;# 
+    30  0010                     	;# 
+    31  0011                     	;# 
+    32  0012                     	;# 
+    33  0013                     	;# 
+    34  0014                     	;# 
+    35  0015                     	;# 
+    36  0016                     	;# 
+    37  0016                     	;# 
+    38  0017                     	;# 
+    39  0018                     	;# 
+    40  0019                     	;# 
+    41  0019                     	;# 
+    42  001A                     	;# 
+    43  001B                     	;# 
+    44  001C                     	;# 
+    45  001D                     	;# 
+    46  001E                     	;# 
+    47  001F                     	;# 
+    48  0020                     	;# 
+    49  0020                     	;# 
+    50  0021                     	;# 
+    51  0022                     	;# 
+    52  0022                     	;# 
+    53  0023                     	;# 
+    54  0024                     	;# 
+    55  0025                     	;# 
+    56  0026                     	;# 
+    57  0027                     	;# 
+    58  0027                     	;# 
+    59  0028                     	;# 
+    60  0029                     	;# 
+    61  002A                     	;# 
+    62  002A                     	;# 
+    63  002B                     	;# 
+    64  002D                     	;# 
+    65  002E                     	;# 
+    66  0030                     	;# 
+    67  0031                     	;# 
+    68  0032                     	;# 
+    69  0033                     	;# 
+    70  0034                     	;# 
+    71  0035                     	;# 
+    72  0036                     	;# 
+    73  0037                     	;# 
+    74  0038                     	;# 
+    75  0039                     	;# 
+    76  003A                     	;# 
+    77  003B                     	;# 
+    78  003C                     	;# 
+    79  003D                     	;# 
+    80  003E                     	;# 
+    81  003F                     	;# 
+    82  0000                     	;# 
+    83  0001                     	;# 
+    84  0002                     	;# 
+    85  0003                     	;# 
+    86  0004                     	;# 
+    87  0005                     	;# 
+    88  0006                     	;# 
+    89  0007                     	;# 
+    90  0008                     	;# 
+    91  0009                     	;# 
+    92  000A                     	;# 
+    93  000B                     	;# 
+    94  000C                     	;# 
+    95  000D                     	;# 
+    96  000E                     	;# 
+    97  000F                     	;# 
+    98  0010                     	;# 
+    99  0011                     	;# 
+   100  0012                     	;# 
+   101  0013                     	;# 
+   102  0014                     	;# 
+   103  0015                     	;# 
+   104  0016                     	;# 
+   105  0016                     	;# 
+   106  0017                     	;# 
+   107  0018                     	;# 
+   108  0019                     	;# 
+   109  0019                     	;# 
+   110  001A                     	;# 
+   111  001B                     	;# 
+   112  001C                     	;# 
+   113  001D                     	;# 
+   114  001E                     	;# 
+   115  001F                     	;# 
+   116  0020                     	;# 
+   117  0020                     	;# 
+   118  0021                     	;# 
+   119  0022                     	;# 
+   120  0022                     	;# 
+   121  0023                     	;# 
+   122  0024                     	;# 
+   123  0025                     	;# 
+   124  0026                     	;# 
+   125  0027                     	;# 
+   126  0027                     	;# 
+   127  0028                     	;# 
+   128  0029                     	;# 
+   129  002A                     	;# 
+   130  002A                     	;# 
+   131  002B                     	;# 
+   132  002D                     	;# 
+   133  002E                     	;# 
+   134  0030                     	;# 
+   135  0031                     	;# 
+   136  0032                     	;# 
+   137  0033                     	;# 
+   138  0034                     	;# 
+   139  0035                     	;# 
+   140  0036                     	;# 
+   141  0037                     	;# 
+   142  0038                     	;# 
+   143  0039                     	;# 
+   144  003A                     	;# 
+   145  003B                     	;# 
+   146  003C                     	;# 
+   147  003D                     	;# 
+   148  003E                     	;# 
+   149  003F                     	;# 
+   150  0000                     	;# 
+   151  0001                     	;# 
+   152  0002                     	;# 
+   153  0003                     	;# 
+   154  0004                     	;# 
+   155  0005                     	;# 
+   156  0006                     	;# 
+   157  0007                     	;# 
+   158  0008                     	;# 
+   159  0009                     	;# 
+   160  000A                     	;# 
+   161  000B                     	;# 
+   162  000C                     	;# 
+   163  000D                     	;# 
+   164  000E                     	;# 
+   165  000F                     	;# 
+   166  0010                     	;# 
+   167  0011                     	;# 
+   168  0012                     	;# 
+   169  0013                     	;# 
+   170  0014                     	;# 
+   171  0015                     	;# 
+   172  0016                     	;# 
+   173  0016                     	;# 
+   174  0017                     	;# 
+   175  0018                     	;# 
+   176  0019                     	;# 
+   177  0019                     	;# 
+   178  001A                     	;# 
+   179  001B                     	;# 
+   180  001C                     	;# 
+   181  001D                     	;# 
+   182  001E                     	;# 
+   183  001F                     	;# 
+   184  0020                     	;# 
+   185  0020                     	;# 
+   186  0021                     	;# 
+   187  0022                     	;# 
+   188  0022                     	;# 
+   189  0023                     	;# 
+   190  0024                     	;# 
+   191  0025                     	;# 
+   192  0026                     	;# 
+   193  0027                     	;# 
+   194  0027                     	;# 
+   195  0028                     	;# 
+   196  0029                     	;# 
+   197  002A                     	;# 
+   198  002A                     	;# 
+   199  002B                     	;# 
+   200  002D                     	;# 
+   201  002E                     	;# 
+   202  0030                     	;# 
+   203  0031                     	;# 
+   204  0032                     	;# 
+   205  0033                     	;# 
+   206  0034                     	;# 
+   207  0035                     	;# 
+   208  0036                     	;# 
+   209  0037                     	;# 
+   210  0038                     	;# 
+   211  0039                     	;# 
+   212  003A                     	;# 
+   213  003B                     	;# 
+   214  003C                     	;# 
+   215  003D                     	;# 
+   216  003E                     	;# 
+   217  003F                     	;# 
+   218  0000                     	;# 
+   219  0001                     	;# 
+   220  0002                     	;# 
+   221  0003                     	;# 
+   222  0004                     	;# 
+   223  0005                     	;# 
+   224  0006                     	;# 
+   225  0007                     	;# 
+   226  0008                     	;# 
+   227  0009                     	;# 
+   228  000A                     	;# 
+   229  000B                     	;# 
+   230  000C                     	;# 
+   231  000D                     	;# 
+   232  000E                     	;# 
+   233  000F                     	;# 
+   234  0010                     	;# 
+   235  0011                     	;# 
+   236  0012                     	;# 
+   237  0013                     	;# 
+   238  0014                     	;# 
+   239  0015                     	;# 
+   240  0016                     	;# 
+   241  0016                     	;# 
+   242  0017                     	;# 
+   243  0018                     	;# 
+   244  0019                     	;# 
+   245  0019                     	;# 
+   246  001A                     	;# 
+   247  001B                     	;# 
+   248  001C                     	;# 
+   249  001D                     	;# 
+   250  001E                     	;# 
+   251  001F                     	;# 
+   252  0020                     	;# 
+   253  0020                     	;# 
+   254  0021                     	;# 
+   255  0022                     	;# 
+   256  0022                     	;# 
+   257  0023                     	;# 
+   258  0024                     	;# 
+   259  0025                     	;# 
+   260  0026                     	;# 
+   261  0027                     	;# 
+   262  0027                     	;# 
+   263  0028                     	;# 
+   264  0029                     	;# 
+   265  002A                     	;# 
+   266  002A                     	;# 
+   267  002B                     	;# 
+   268  002D                     	;# 
+   269  002E                     	;# 
+   270  0030                     	;# 
+   271  0031                     	;# 
+   272  0032                     	;# 
+   273  0033                     	;# 
+   274  0034                     	;# 
+   275  0035                     	;# 
+   276  0036                     	;# 
+   277  0037                     	;# 
+   278  0038                     	;# 
+   279  0039                     	;# 
+   280  003A                     	;# 
+   281  003B                     	;# 
+   282  003C                     	;# 
+   283  003D                     	;# 
+   284  003E                     	;# 
+   285  003F                     	;# 
+   286  0000                     	;# 
+   287  0001                     	;# 
+   288  0002                     	;# 
+   289  0003                     	;# 
+   290  0004                     	;# 
+   291  0005                     	;# 
+   292  0006                     	;# 
+   293  0007                     	;# 
+   294  0008                     	;# 
+   295  0009                     	;# 
+   296  000A                     	;# 
+   297  000B                     	;# 
+   298  000C                     	;# 
+   299  000D                     	;# 
+   300  000E                     	;# 
+   301  000F                     	;# 
+   302  0010                     	;# 
+   303  0011                     	;# 
+   304  0012                     	;# 
+   305  0013                     	;# 
+   306  0014                     	;# 
+   307  0015                     	;# 
+   308  0016                     	;# 
+   309  0016                     	;# 
+   310  0017                     	;# 
+   311  0018                     	;# 
+   312  0019                     	;# 
+   313  0019                     	;# 
+   314  001A                     	;# 
+   315  001B                     	;# 
+   316  001C                     	;# 
+   317  001D                     	;# 
+   318  001E                     	;# 
+   319  001F                     	;# 
+   320  0020                     	;# 
+   321  0020                     	;# 
+   322  0021                     	;# 
+   323  0022                     	;# 
+   324  0022                     	;# 
+   325  0023                     	;# 
+   326  0024                     	;# 
+   327  0025                     	;# 
+   328  0026                     	;# 
+   329  0027                     	;# 
+   330  0027                     	;# 
+   331  0028                     	;# 
+   332  0029                     	;# 
+   333  002A                     	;# 
+   334  002A                     	;# 
+   335  002B                     	;# 
+   336  002D                     	;# 
+   337  002E                     	;# 
+   338  0030                     	;# 
+   339  0031                     	;# 
+   340  0032                     	;# 
+   341  0033                     	;# 
+   342  0034                     	;# 
+   343  0035                     	;# 
+   344  0036                     	;# 
+   345  0037                     	;# 
+   346  0038                     	;# 
+   347  0039                     	;# 
+   348  003A                     	;# 
+   349  003B                     	;# 
+   350  003C                     	;# 
+   351  003D                     	;# 
+   352  003E                     	;# 
+   353  003F                     	;# 
+   354  0008                     _ANSELA	set	8
+   355  0007                     _LATAbits	set	7
+   356  0005                     _PORTAbits	set	5
+   357  0006                     _TRISA	set	6
+   358                           
+   359                           	psect	text0
+   360  0000                     __ptext0:	
+   361                           ; #config settings
+   362                           
+   363                           
+   364                           ;psect for function _isr
+   365  0000                     
+   366                           	psect	cinit
+   367  000F                     start_initialization:	
+   368  000F                     __initialization:	
+   369  000F                     end_of_initialization:	
+   370                           ;End of C runtime variable initialization code
+   371                           
+   372  000F                     __end_of__initialization:	
+   373  000F  0183               	clrf	3
+   374  0010  281C               	ljmp	_main	;jump to C main() function
+   375                           
+   376                           	psect	cstackCOMMON
+   377  0000                     __pcstackCOMMON:	
+   378  0000                     ??_ConfigureOscillator:	
+   379  0000                     ??_InitApp:	
+   380                           ; 0 bytes @ 0x0
+   381                           
+   382  0000                     ??_main:	
+   383                           ; 0 bytes @ 0x0
+   384                           
+   385                           
+   386                           	psect	cstackBANK0
+   387  0040                     __pcstackBANK0:	
+   388                           ; 0 bytes @ 0x0
+   389                           
+   390  0040                     ?_ConfigureOscillator:	
+   391  0040                     ?_InitApp:	
+   392                           ; 0 bytes @ 0x0
+   393                           
+   394  0040                     ?_isr:	
+   395                           ; 0 bytes @ 0x0
+   396                           
+   397  0040                     ??_isr:	
+   398                           ; 0 bytes @ 0x0
+   399                           
+   400  0040                     ?_main:	
+   401                           ; 0 bytes @ 0x0
+   402                           
+   403                           
+   404                           ; 0 bytes @ 0x0
+   405  0040                     	ds	4
+   406                           
+   407                           	psect	maintext
+   408  001C                     __pmaintext:	
+   409 ;;
+   410 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   411 ;;
+   412 ;; *************** function _main *****************
+   413 ;; Defined at:
+   414 ;;		line 27 in file "main.c"
+   415 ;; Parameters:    Size  Location     Type
+   416 ;;		None
+   417 ;; Auto vars:     Size  Location     Type
+   418 ;;		None
+   419 ;; Return value:  Size  Location     Type
+   420 ;;		None               void
+   421 ;; Registers used:
+   422 ;;		wreg, status,2, status,0, pclath, cstack
+   423 ;; Tracked objects:
+   424 ;;		On entry : 17F/0
+   425 ;;		On exit  : 0/0
+   426 ;;		Unchanged: 0/0
+   427 ;; Data sizes:     COMMON   BANK0
+   428 ;;      Params:         0       0
+   429 ;;      Locals:         0       0
+   430 ;;      Temps:          0       0
+   431 ;;      Totals:         0       0
+   432 ;;Total ram usage:        0 bytes
+   433 ;; Hardware stack levels required when called:    2
+   434 ;; This function calls:
+   435 ;;		_ConfigureOscillator
+   436 ;;		_InitApp
+   437 ;; This function is called by:
+   438 ;;		Startup code after reset
+   439 ;; This function uses a non-reentrant model
+   440 ;;
+   441                           
+   442                           
+   443                           ;psect for function _main
+   444  001C                     _main:	
+   445                           
+   446                           ;main.c: 30: ConfigureOscillator();
+   447                           
+   448                           ;incstack = 0
+   449                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
+   450  001C  202A               	fcall	_ConfigureOscillator
+   451                           
+   452                           ;main.c: 33: InitApp();
+   453  001D  2024               	fcall	_InitApp
+   454  001E                     l424:	
+   455                           ;main.c: 37: while(1)
+   456                           
+   457                           
+   458                           ;main.c: 38: {
+   459                           ;main.c: 40: if(PORTAbits.RA0==1)
+   460  001E  1805               	btfsc	5,0	;volatile
+   461                           
+   462                           ;main.c: 41: LATAbits.LATA2=1;
+   463  001F  1507               	bsf	7,2	;volatile
+   464                           
+   465                           ;main.c: 42: if(PORTAbits.RA0==0)
+   466  0020  1805               	btfsc	5,0	;volatile
+   467  0021  281E               	goto	l424
+   468                           
+   469                           ;main.c: 43: LATAbits.LATA2=0;
+   470  0022  1107               	bcf	7,2	;volatile
+   471  0023  281E               	goto	l424
+   472  0024                     __end_of_main:	
+   473                           
+   474                           	psect	text1
+   475  0024                     __ptext1:	
+   476 ;; *************** function _InitApp *****************
+   477 ;; Defined at:
+   478 ;;		line 22 in file "user.c"
+   479 ;; Parameters:    Size  Location     Type
+   480 ;;		None
+   481 ;; Auto vars:     Size  Location     Type
+   482 ;;		None
+   483 ;; Return value:  Size  Location     Type
+   484 ;;		None               void
+   485 ;; Registers used:
+   486 ;;		wreg, status,2
+   487 ;; Tracked objects:
+   488 ;;		On entry : 0/0
+   489 ;;		On exit  : 0/0
+   490 ;;		Unchanged: 0/0
+   491 ;; Data sizes:     COMMON   BANK0
+   492 ;;      Params:         0       0
+   493 ;;      Locals:         0       0
+   494 ;;      Temps:          0       0
+   495 ;;      Totals:         0       0
+   496 ;;Total ram usage:        0 bytes
+   497 ;; Hardware stack levels used:    1
+   498 ;; Hardware stack levels required when called:    1
+   499 ;; This function calls:
+   500 ;;		Nothing
+   501 ;; This function is called by:
+   502 ;;		_main
+   503 ;; This function uses a non-reentrant model
+   504 ;;
+   505                           
+   506                           
+   507                           ;psect for function _InitApp
+   508  0024                     _InitApp:	
+   509                           
+   510                           ;user.c: 28: ANSELA=0x00;
+   511                           
+   512                           ;incstack = 0
+   513                           ; Regs used in _InitApp: [wreg+status,2]
+   514  0024  0188               	clrf	8	;volatile
+   515                           
+   516                           ;user.c: 29: TRISA=0x01;
+   517  0025  3001               	movlw	1
+   518  0026  0086               	movwf	6	;volatile
+   519                           
+   520                           ;user.c: 31: LATAbits.LATA1=0;
+   521  0027  1087               	bcf	7,1	;volatile
+   522                           
+   523                           ;user.c: 32: LATAbits.LATA2=1;
+   524  0028  1507               	bsf	7,2	;volatile
+   525  0029  0008               	return
+   526  002A                     __end_of_InitApp:	
+   527                           
+   528                           	psect	text2
+   529  002A                     __ptext2:	
+   530 ;; *************** function _ConfigureOscillator *****************
+   531 ;; Defined at:
+   532 ;;		line 18 in file "system.c"
+   533 ;; Parameters:    Size  Location     Type
+   534 ;;		None
+   535 ;; Auto vars:     Size  Location     Type
+   536 ;;		None
+   537 ;; Return value:  Size  Location     Type
+   538 ;;		None               void
+   539 ;; Registers used:
+   540 ;;		None
+   541 ;; Tracked objects:
+   542 ;;		On entry : 0/0
+   543 ;;		On exit  : 0/0
+   544 ;;		Unchanged: 0/0
+   545 ;; Data sizes:     COMMON   BANK0
+   546 ;;      Params:         0       0
+   547 ;;      Locals:         0       0
+   548 ;;      Temps:          0       0
+   549 ;;      Totals:         0       0
+   550 ;;Total ram usage:        0 bytes
+   551 ;; Hardware stack levels used:    1
+   552 ;; Hardware stack levels required when called:    1
+   553 ;; This function calls:
+   554 ;;		Nothing
+   555 ;; This function is called by:
+   556 ;;		_main
+   557 ;; This function uses a non-reentrant model
+   558 ;;
+   559                           
+   560                           
+   561                           ;psect for function _ConfigureOscillator
+   562  002A                     _ConfigureOscillator:	
+   563                           
+   564                           ;incstack = 0
+   565                           ; Regs used in _ConfigureOscillator: []
+   566  002A  0008               	return
+   567  002B                     __end_of_ConfigureOscillator:	
+   568                           
+   569                           	psect	text3
+   570  0011                     __ptext3:	
+   571 ;; *************** function _isr *****************
+   572 ;; Defined at:
+   573 ;;		line 24 in file "interrupts.c"
+   574 ;; Parameters:    Size  Location     Type
+   575 ;;		None
+   576 ;; Auto vars:     Size  Location     Type
+   577 ;;		None
+   578 ;; Return value:  Size  Location     Type
+   579 ;;		None               void
+   580 ;; Registers used:
+   581 ;;		None
+   582 ;; Tracked objects:
+   583 ;;		On entry : 0/0
+   584 ;;		On exit  : 0/0
+   585 ;;		Unchanged: 0/0
+   586 ;; Data sizes:     COMMON   BANK0
+   587 ;;      Params:         0       0
+   588 ;;      Locals:         0       0
+   589 ;;      Temps:          0       4
+   590 ;;      Totals:         0       4
+   591 ;;Total ram usage:        4 bytes
+   592 ;; Hardware stack levels used:    1
+   593 ;; This function calls:
+   594 ;;		Nothing
+   595 ;; This function is called by:
+   596 ;;		Interrupt level 1
+   597 ;; This function uses a non-reentrant model
+   598 ;;
+   599                           
+   600                           
+   601                           ;psect for function _isr
+   602  0011                     _isr:	
+   603  0011  0843               	movf	??_isr+3,w
+   604  0012  00FF               	movwf	127
+   605  0013  0842               	movf	??_isr+2,w
+   606  0014  008A               	movwf	10
+   607  0015  0841               	movf	??_isr+1,w
+   608  0016  0084               	movwf	4
+   609  0017  0E40               	swapf	??_isr^0,w
+   610  0018  0083               	movwf	3
+   611  0019  0EFE               	swapf	126,f
+   612  001A  0E7E               	swapf	126,w
+   613  001B  0009               	retfie
+   614  001C                     __end_of_isr:	
+   615  007E                     btemp	set	126	;btemp
+   616  007E                     wtemp	set	126
+   617  007E                     wtemp0	set	126
+   618  0080                     wtemp1	set	128
+   619  0082                     wtemp2	set	130
+   620  0084                     wtemp3	set	132
+   621  0086                     wtemp4	set	134
+   622  0088                     wtemp5	set	136
+   623  007F                     wtemp6	set	127
+   624  007E                     ttemp	set	126
+   625  007E                     ttemp0	set	126
+   626  0081                     ttemp1	set	129
+   627  0084                     ttemp2	set	132
+   628  0087                     ttemp3	set	135
+   629  007F                     ttemp4	set	127
+   630  007E                     ltemp	set	126
+   631  007E                     ltemp0	set	126
+   632  0082                     ltemp1	set	130
+   633  0086                     ltemp2	set	134
+   634  0080                     ltemp3	set	128
+   635                           
+   636                           	psect	intentry
+   637  0004                     __pintentry:	
+   638                           ;incstack = 0
+   639                           ; Regs used in _isr: []
+   640                           
+   641  0004                     interrupt_function:	
+   642  007E                     saved_w	set	btemp
+   643  0004  00FE               	movwf	btemp
+   644  0005  0E03               	swapf	3,w
+   645  0006  00C0               	movwf	??_isr
+   646  0007  0804               	movf	4,w
+   647  0008  00C1               	movwf	??_isr+1
+   648  0009  080A               	movf	10,w
+   649  000A  00C2               	movwf	??_isr+2
+   650  000B  087F               	movf	btemp+1,w
+   651  000C  00C3               	movwf	??_isr+3
+   652  000D  2811               	ljmp	_isr
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMMON            0      0       0
+    BANK0            62      4       4
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMMON
+
+    None.
+
+Critical Paths under _isr in COMMON
+
+    None.
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _isr in BANK0
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 0     0      0       0
+                _ConfigureOscillator
+                            _InitApp
+ ---------------------------------------------------------------------------------
+ (1) _InitApp                                              0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _ConfigureOscillator                                  0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (2) _isr                                                  4     4      0       0
+                                              0 BANK0      4     4      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 2
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _ConfigureOscillator
+   _InitApp
+
+ _isr (ROOT)
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMMON            0      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+BITSFR0              0      0       0       1        0.0%
+SFR0                 0      0       0       1        0.0%
+COMMON               0      0       0       1        0.0%
+STACK                0      0       0       2        0.0%
+BANK0               3E      4       4       3        6.5%
+ABS                  0      0       0       4        0.0%
+DATA                 0      0       0       5        0.0%
+BITBANK0            3E      0       0       6        0.0%
+
+
+Microchip Technology PIC Macro Assembler V1.30 build 55553 
+Symbol Table                                                                                   Wed Jan 07 17:52:41 2015
+
+                 __CFG_CP$OFF 0000                           l424 001E                           _isr 0011  
+                         fsr0 0004                  __CFG_BORV$LO 0000                  __CFG_LVP$OFF 0000  
+                        ?_isr 0040                  __CFG_WRT$OFF 0000                          _main 001C  
+                        btemp 007E                 __CFG_BOREN$ON 0000                          ltemp 007E  
+                        start 000E                          ttemp 007E                          wtemp 007E  
+             __end_of_InitApp 002A                 __CFG_LPBOR$ON 0000                         ??_isr 0040  
+                       ?_main 0040                 __CFG_WDTE$OFF 0000                         _TRISA 0006  
+         _ConfigureOscillator 002A                 __CFG_PWRTE$ON 0000                         pclath 000A  
+                       ltemp0 007E                         ltemp1 0082                         ltemp2 0086  
+                       ltemp3 0080                         ttemp0 007E                         ttemp1 0081  
+                       ttemp2 0084                         ttemp3 0087                         ttemp4 007F  
+                       status 0003                         wtemp0 007E                         wtemp1 0080  
+                       wtemp2 0082                         wtemp3 0084                         wtemp4 0086  
+                       wtemp5 0088                         wtemp6 007F          ?_ConfigureOscillator 0040  
+              __CFG_MCLRE$OFF 0000               __initialization 000F                  __end_of_main 0024  
+                      ??_main 0000                        _ANSELA 0008                     ??_InitApp 0000  
+       ??_ConfigureOscillator 0000                        saved_w 007E       __end_of__initialization 000F  
+              __pcstackCOMMON 0000                    __pmaintext 001C                    __pintentry 0004  
+                     _InitApp 0024                       __ptext0 0000                       __ptext1 0024  
+                     __ptext2 002A                       __ptext3 0011                  __size_of_isr 000B  
+        end_of_initialization 000F                     _PORTAbits 0005              __CFG_FOSC$INTOSC 0000  
+ __end_of_ConfigureOscillator 002B           start_initialization 000F                   __end_of_isr 001C  
+                   ___latbits 0000                 __pcstackBANK0 0040                      ?_InitApp 0040  
+           interrupt_function 0004                      _LATAbits 0007              __size_of_InitApp 0006  
+               __size_of_main 0008  __size_of_ConfigureOscillator 0001                      intlevel1 0000  

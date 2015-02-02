@@ -1,0 +1,48 @@
+#
+# Generated - do not edit!
+#
+# NOCDDL
+#
+CND_BASEDIR=`pwd`
+# XC8_PIC10F320 configuration
+CND_ARTIFACT_DIR_XC8_PIC10F320=dist/XC8_PIC10F320/production
+CND_ARTIFACT_NAME_XC8_PIC10F320=boitier_protection_OZ440.X.production.hex
+CND_ARTIFACT_PATH_XC8_PIC10F320=dist/XC8_PIC10F320/production/boitier_protection_OZ440.X.production.hex
+CND_PACKAGE_DIR_XC8_PIC10F320=${CND_DISTDIR}/XC8_PIC10F320/package
+CND_PACKAGE_NAME_XC8_PIC10F320=boitierprotectionoz440.x.tar
+CND_PACKAGE_PATH_XC8_PIC10F320=${CND_DISTDIR}/XC8_PIC10F320/package/boitierprotectionoz440.x.tar
+# HT_PIC10F200 configuration
+CND_ARTIFACT_DIR_HT_PIC10F200=dist/HT_PIC10F200/production
+CND_ARTIFACT_NAME_HT_PIC10F200=boitier_protection_OZ440.X.production.hex
+CND_ARTIFACT_PATH_HT_PIC10F200=dist/HT_PIC10F200/production/boitier_protection_OZ440.X.production.hex
+CND_PACKAGE_DIR_HT_PIC10F200=${CND_DISTDIR}/HT_PIC10F200/package
+CND_PACKAGE_NAME_HT_PIC10F200=boitierprotectionoz440.x.tar
+CND_PACKAGE_PATH_HT_PIC10F200=${CND_DISTDIR}/HT_PIC10F200/package/boitierprotectionoz440.x.tar
+# XC8_PIC10F222 configuration
+CND_ARTIFACT_DIR_XC8_PIC10F222=dist/XC8_PIC10F222/production
+CND_ARTIFACT_NAME_XC8_PIC10F222=boitier_protection_OZ440.X.production.hex
+CND_ARTIFACT_PATH_XC8_PIC10F222=dist/XC8_PIC10F222/production/boitier_protection_OZ440.X.production.hex
+CND_PACKAGE_DIR_XC8_PIC10F222=${CND_DISTDIR}/XC8_PIC10F222/package
+CND_PACKAGE_NAME_XC8_PIC10F222=boitierprotectionoz440.x.tar
+CND_PACKAGE_PATH_XC8_PIC10F222=${CND_DISTDIR}/XC8_PIC10F222/package/boitierprotectionoz440.x.tar
+# HT_PIC10F222 configuration
+CND_ARTIFACT_DIR_HT_PIC10F222=dist/HT_PIC10F222/production
+CND_ARTIFACT_NAME_HT_PIC10F222=boitier_protection_OZ440.X.production.hex
+CND_ARTIFACT_PATH_HT_PIC10F222=dist/HT_PIC10F222/production/boitier_protection_OZ440.X.production.hex
+CND_PACKAGE_DIR_HT_PIC10F222=${CND_DISTDIR}/HT_PIC10F222/package
+CND_PACKAGE_NAME_HT_PIC10F222=boitierprotectionoz440.x.tar
+CND_PACKAGE_PATH_HT_PIC10F222=${CND_DISTDIR}/HT_PIC10F222/package/boitierprotectionoz440.x.tar
+# XC8_PIC10F322 configuration
+CND_ARTIFACT_DIR_XC8_PIC10F322=dist/XC8_PIC10F322/production
+CND_ARTIFACT_NAME_XC8_PIC10F322=boitier_protection_OZ440.X.production.hex
+CND_ARTIFACT_PATH_XC8_PIC10F322=dist/XC8_PIC10F322/production/boitier_protection_OZ440.X.production.hex
+CND_PACKAGE_DIR_XC8_PIC10F322=${CND_DISTDIR}/XC8_PIC10F322/package
+CND_PACKAGE_NAME_XC8_PIC10F322=boitierprotectionoz440.x.tar
+CND_PACKAGE_PATH_XC8_PIC10F322=${CND_DISTDIR}/XC8_PIC10F322/package/boitierprotectionoz440.x.tar
+# HT_PIC10F322 configuration
+CND_ARTIFACT_DIR_HT_PIC10F322=dist/HT_PIC10F322/production
+CND_ARTIFACT_NAME_HT_PIC10F322=boitier_protection_OZ440.X.production.hex
+CND_ARTIFACT_PATH_HT_PIC10F322=dist/HT_PIC10F322/production/boitier_protection_OZ440.X.production.hex
+CND_PACKAGE_DIR_HT_PIC10F322=${CND_DISTDIR}/HT_PIC10F322/package
+CND_PACKAGE_NAME_HT_PIC10F322=boitierprotectionoz440.x.tar
+CND_PACKAGE_PATH_HT_PIC10F322=${CND_DISTDIR}/HT_PIC10F322/package/boitierprotectionoz440.x.tar
